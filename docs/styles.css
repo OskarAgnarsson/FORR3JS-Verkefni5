@@ -1,0 +1,8 @@
+.spurnListi {
+	max-width: 60em;
+	border: solid black 0.01em;
+}
+
+.spurnListi h2 {
+	margin-left: 1em;
+}
