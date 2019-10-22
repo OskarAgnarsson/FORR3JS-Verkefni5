@@ -1,3 +1,16 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 40em;
+	margin: 0 auto;
+	background-color:#4a4b8a;
+	color: #cccddd;
+}
+
+/* Verkefni 5.1 */
+
 .spurnListi {
 	max-width: 60em;
 	border: solid black 0.01em;
@@ -19,4 +32,87 @@
 	font-size: 3em;
 	text-decoration: none;
 	border-radius: 0.3em;
+}
+
+/* Quiz App */
+
+#quizContainer {
+	margin-top: 2em;
+	display: grid;
+	grid-template-rows: 1fr 1fr 0.5fr;
+	background-color: #313263;
+	color: #cccddd;
+	border-radius: 1em;
+}
+
+.spurn {
+	max-width: 30em;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.spurn h1{
+	margin-top: 2em;
+	font-size: 2em;
+	text-align: center;
+}
+
+.svorListi {
+	max-width: 30em;
+	margin: 0 auto;
+}
+
+.svorRow {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-bottom: 1em;
+}
+
+.svar {
+	margin: 0.5em;
+	text-decoration: none;
+	background-color: #473470;
+	color: #cccddd;
+	border: solid black 0.1em;
+	border-radius: 0.5em;
+}
+
+.svar:active {
+	background-color: #342652;
+}
+
+.svar:focus {
+	outline: none;
+}
+
+.rett {
+	background-color: lime;
+	color: black;
+}
+
+.rett:active {
+	background-color: darkgreen;
+}
+
+.rangt {
+	background-color: red;
+	color: black; 
+}
+
+.rangt:active {
+	background-color: darkred;
+}
+
+.back {
+	text-align: center;
+}
+
+.back a {
+	font-size: 3em;
+	color: white;
+	text-decoration: none;
+}
+
+.back a:active {
+	color: gray;
 }

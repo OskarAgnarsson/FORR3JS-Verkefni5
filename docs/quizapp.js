@@ -26,7 +26,7 @@ Spurning.prototype.setSpurning = function(){
                     svar.type = "button";
                     svar.classList.add("svar");
                     svar.innerHTML = `<p>${this.svor[count]}</p>`;
-                    //svar.addEventListener("click",rett);
+                    svar.addEventListener("click",rett);
                     svorRow.append(svar);
                     count++;
                 } else {
@@ -34,7 +34,7 @@ Spurning.prototype.setSpurning = function(){
                     svar.type = "button";
                     svar.classList.add("svar");
                     svar.innerHTML = `<p>${this.svor[count]}</p>`;
-                    //svar.addEventListener("click",rangt);
+                    svar.addEventListener("click",rangt);
                     svorRow.append(svar);
                     count++;
                 }
@@ -44,11 +44,66 @@ Spurning.prototype.setSpurning = function(){
     }
     container.append(spurn);
     container.append(svorListi);
+    let back = document.createElement("div");
+    back.classList.add("back");
+    back.innerHTML = "<a href='index.html'>Til Baka</a>";
+    container.append(back);
+
 }
 
+Spurning.prototype.clearSpurning = function() {
+    container.innerHTML = "";
+}
 const spurn1 = "Who has the role of Tony Stark in Iron Man";
 const svor1 = ["Ian McKellen","Patrick Stewart","Brad Pitt","Robert Downey Jr."];
+const spurning1 = new Spurning(spurn1,svor1,3);
 
-let spurning1 = new Spurning(spurn1,svor1,3);
+const spurn2 = "Er þetta true";
+const svor2 = ["True","False"];
+const spurning2 = new Spurning(spurn2,svor2,0);
 
-spurning1.setSpurning();
+const spurn3 = "Cool";
+const svor3 = [" & Good", " & Nice", "& Fine", " & Awesome", " & Ok", " & Cool"];
+const spurning3 = new Spurning(spurn3,svor3,1);
+
+const spurningar = [spurning1,spurning2,spurning3];
+let currentSpurning = 0;
+
+const rangtListi = document.getElementsByClassName("rangt");
+const rettListi = document.getElementsByClassName("rett");
+
+function rett() {
+    if (rangtListi.length == 0 && rettListi.length == 0) {
+        this.classList.add("rett");
+        setTimeout(function() {
+            currentSpurning++;
+            if (spurningar.length > currentSpurning) {
+                spurningar[currentSpurning].clearSpurning();
+                spurningar[currentSpurning].setSpurning();
+            } else {
+                currentSpurning = 0;
+                spurningar[currentSpurning].clearSpurning();
+                spurningar[currentSpurning].setSpurning();
+            }
+    },1000);
+}
+}
+
+function rangt() {
+    if (rangtListi.length == 0 && rettListi.length == 0) {
+        this.classList.add("rangt")
+        setTimeout(function() {
+            currentSpurning++;
+            if (spurningar.length > currentSpurning) {
+                spurningar[currentSpurning].clearSpurning();
+                spurningar[currentSpurning].setSpurning();
+            } else {
+                currentSpurning = 0;
+                spurningar[currentSpurning].clearSpurning();
+                spurningar[currentSpurning].setSpurning();
+            }
+    },1000);
+}
+}
+
+spurningar[currentSpurning].setSpurning();
