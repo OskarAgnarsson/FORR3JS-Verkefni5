@@ -39,7 +39,7 @@ body {
 #quizContainer {
 	margin-top: 2em;
 	display: grid;
-	grid-template-rows: 1fr 1fr 0.5fr;
+	grid-template-rows: 0.3fr 0.2fr 0.5fr;
 	background-color: #313263;
 	color: #cccddd;
 	border-radius: 1em;
@@ -70,6 +70,7 @@ body {
 
 .svar {
 	margin: 0.5em;
+	min-width: 10em;
 	text-decoration: none;
 	background-color: #473470;
 	color: #cccddd;

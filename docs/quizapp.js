@@ -54,17 +54,17 @@ Spurning.prototype.setSpurning = function(){
 Spurning.prototype.clearSpurning = function() {
     container.innerHTML = "";
 }
-const spurn1 = "Who has the role of Tony Stark in Iron Man";
-const svor1 = ["Ian McKellen","Patrick Stewart","Brad Pitt","Robert Downey Jr."];
+const spurn1 = "What is the airspeed velocity of an unladen swallow?";
+const svor1 = ["African or European swallow?","I don't know that!","It doesn't matter","50-65km/h"];
 const spurning1 = new Spurning(spurn1,svor1,3);
 
-const spurn2 = "Er þetta true";
+const spurn2 = "According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.";
 const svor2 = ["True","False"];
 const spurning2 = new Spurning(spurn2,svor2,0);
 
-const spurn3 = "Cool";
-const svor3 = [" & Good", " & Nice", "& Fine", " & Awesome", " & Ok", " & Cool"];
-const spurning3 = new Spurning(spurn3,svor3,1);
+const spurn3 = "Who is the coach of Mousesports";
+const svor3 = ["yNk", "lmbt", "adreN", "Kakafu", "Rejin", "Johnta"];
+const spurning3 = new Spurning(spurn3,svor3,4);
 
 const spurningar = [spurning1,spurning2,spurning3];
 let currentSpurning = 0;
