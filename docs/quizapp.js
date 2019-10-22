@@ -80,10 +80,6 @@ function rett() {
             if (spurningar.length > currentSpurning) {
                 spurningar[currentSpurning].clearSpurning();
                 spurningar[currentSpurning].setSpurning();
-            } else {
-                currentSpurning = 0;
-                spurningar[currentSpurning].clearSpurning();
-                spurningar[currentSpurning].setSpurning();
             }
     },1000);
 }
@@ -95,10 +91,6 @@ function rangt() {
         setTimeout(function() {
             currentSpurning++;
             if (spurningar.length > currentSpurning) {
-                spurningar[currentSpurning].clearSpurning();
-                spurningar[currentSpurning].setSpurning();
-            } else {
-                currentSpurning = 0;
                 spurningar[currentSpurning].clearSpurning();
                 spurningar[currentSpurning].setSpurning();
             }
